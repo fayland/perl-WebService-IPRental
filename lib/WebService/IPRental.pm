@@ -1,6 +1,6 @@
 package WebService::IPRental;
 
-# ABSTRACT: Todoist API
+# ABSTRACT: IP Rental API
 
 use strict;
 use warnings;
