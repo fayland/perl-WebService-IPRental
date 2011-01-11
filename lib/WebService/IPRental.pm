@@ -34,6 +34,8 @@ $SOAP::Constants::PREFIX_ENC = 'SOAP-ENC';
         print "IP:   " . $ipr->verboseReponseCode($resp->{IP}) . "\n";
         print "Port: " . $ipr->verboseReponseCode($resp->{Port}) . "\n";
         print "TTL:  " . $ipr->verboseReponseCode($resp->{TTL}) . "\n";
+        
+        # $ua->proxy(['http', 'https'], 'http://'. $resp->{IP} . ':' . $resp->{Port});
     } else {
         die 'Caught error: ' . $ipr->verboseReponseCode($resp->{Response});
     }
