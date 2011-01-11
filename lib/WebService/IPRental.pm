@@ -111,7 +111,7 @@ sub doIpLease {
 sub verboseReponseCode {
     my ($self, $r) = @_;
 
-    return "Good, Fresh IP" if $r == 202:
+    return "Good, Fresh IP" if $r == 202;
     return "Good, Duplicate IP" if $r == 203;
     return "Internal Error, Unable to serve IP" if $r == 402;
     return "Unknown User Authentication" if $r == 403;
