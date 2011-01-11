@@ -87,19 +87,19 @@ sub doIpLease {
 =pod
     
             /**
-			 * ========  Response Codes are listed as so ========
-			 * 
-			 * ---- Positive ------------------------------------
-			 *  202 = Good, Fresh IP
-			 *  203 = Good, Duplicate IP
-			 * 
-			 * ---- Negative ------------------------------------
-			 *  402 = Internal Error, Unable to serve IP
-			 *  403 = Unknown User Authentication
-			 *  404 = Unknown API Authentication
-			 *  405 = 0 IP leases left in your pool
-			 *  406 = Impermissible network type
-	 		 */
+             * ========  Response Codes are listed as so ========
+             * 
+             * ---- Positive ------------------------------------
+             *  202 = Good, Fresh IP
+             *  203 = Good, Duplicate IP
+             * 
+             * ---- Negative ------------------------------------
+             *  402 = Internal Error, Unable to serve IP
+             *  403 = Unknown User Authentication
+             *  404 = Unknown API Authentication
+             *  405 = 0 IP leases left in your pool
+             *  406 = Impermissible network type
+             */
 
 =cut
 
@@ -108,15 +108,15 @@ sub doIpLease {
 
 sub verboseReponseCode {
     my ($self, $r) = @_;
-	
-	return "Good, Fresh IP" if $r == 202:
-	return "Good, Duplicate IP" if $r == 203;
-	return "Internal Error, Unable to serve IP" if $r == 402;
-	return "Unknown User Authentication" if $r == 403;
-	return "Unknown API Authentication" if $r == 404;
+
+    return "Good, Fresh IP" if $r == 202:
+    return "Good, Duplicate IP" if $r == 203;
+    return "Internal Error, Unable to serve IP" if $r == 402;
+    return "Unknown User Authentication" if $r == 403;
+    return "Unknown API Authentication" if $r == 404;
     return "0 IP leases left in your pool" if $r == 405;
-	return "Impermissible network type" if $r == 406;
-	return "Unknown";
+    return "Impermissible network type" if $r == 406;
+    return "Unknown";
 }
 
 1;
